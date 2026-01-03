@@ -1,0 +1,24 @@
+
+
+Windows single-camera gaze tracker (screen intersection only)
+MediaPipe TASKS FaceLandmarker (NO mp.solutions) + High-accuracy regression + Stable 9pt affine quick-cal.
+
+CPU smoothness improvements:
+- Run FaceLandmarker at fixed INFER_FPS (e.g., 25-30), NOT every frame.
+- Camera buffer size = 1 to avoid latency build-up.
+- Separate inference resolution (smaller) from display resolution.
+- Only run ML prediction when a NEW landmark packet arrives.
+
+Install:
+  pip install opencv-python numpy scikit-learn mediapipe
+
+Model:
+  Put face_landmarker.task next to this script.
+
+Run:
+  python eyetrack.py
+
+Keys:
+  ESC   : quit
+  SPACE : Quick 9-point recalibration (fullscreen 3x3) -> affine correction (stable, no divergence)
+  R     : clear quick-cal correction (back to base)
