@@ -13,10 +13,11 @@ Install:
   pip install opencv-python numpy scikit-learn mediapipe
 
 Model:
-  Put face_landmarker.task next to this script.
+  Put face_landmarker.task next to the script
 
 Run:
   python eyetrack.py
+  While initialising, and running, keeping your head stable
 
 Keys:
   ESC   : quit
