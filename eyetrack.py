@@ -413,9 +413,8 @@ class CameraWorker:
         return frame, packet, seq, err, err_age
 
 
-# -----------------------------
-# Base model (high-accuracy)
-# -----------------------------
+
+#Base model (high-accuracy)
 class GazeModel:
     def __init__(self):
         base_est = ExtraTreesRegressor(

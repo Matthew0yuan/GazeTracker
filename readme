@@ -1,6 +1,7 @@
 
 
 Windows single-camera gaze tracker (screen intersection only)
+this is only avaliable to run on Python 3.11
 MediaPipe TASKS FaceLandmarker (NO mp.solutions) + High-accuracy regression + Stable 9pt affine quick-cal.
 
 CPU smoothness improvements:
